@@ -1,0 +1,27 @@
+schema_version = "1.3"
+
+[task]
+name = "local/weighted-site-reconstruct"
+authors = [{ name = "fengyin" }]
+description = "布局组手里有一张旧的加权 Voronoi 工作岛图，但测距仪把工位标签打乱了。三个锚点的距离和接触偏置还在，需要先还原坐标与权重，再把测量工位对回图中站点。"
+keywords = ['weighted-geometry', 'trilateration', 'global-assignment', 'ledger']
+
+[agent]
+timeout_sec = 3600
+
+[environment]
+build_timeout_sec = 600
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+allow_internet = true
+
+[verifier]
+timeout_sec = 600
+
+[metadata]
+difficulty = "hard"
+category = "mathematics"
+tags = ['weighted-geometry', 'trilateration', 'global-assignment', 'ledger']
+expert_time_estimate = "70m"
